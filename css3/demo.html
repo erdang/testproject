@@ -47,14 +47,57 @@
     font-weight:bold;}
 h1{text-shadow: 5px 5px 5px #FF0000;
         font-family:myFirstFont;}
-div
+1div
 {
+    /*旋转*/
     transform: rotate(30deg);
     -ms-transform: rotate(30deg);		/* IE 9 */
     -webkit-transform: rotate(30deg);	/* Safari and Chrome */
     -o-transform: rotate(30deg);		/* Opera */
     -moz-transform: rotate(30deg);		/* Firefox */
+    /*移动*/
+    transform: translate(50px,100px);
+    -ms-transform: translate(50px,100px);		/* IE 9 */
+    -webkit-transform: translate(50px,100px);	/* Safari and Chrome */
+    -o-transform: translate(50px,100px);		/* Opera */
+    -moz-transform: translate(50px,100px);		/* Firefox */
+    /*放大缩小*/
+    transform: scale(2,4);
+    -ms-transform: scale(2,4);	/* IE 9 */
+    -webkit-transform: scale(2,4);	/* Safari 和 Chrome */
+    -o-transform: scale(2,4);	/* Opera */
+    -moz-transform: scale(2,4);	/* Firefox */
+    /*X轴旋转+Y轴旋转*/
+    transform: skew(30deg,20deg);
+    -ms-transform: skew(30deg,20deg);	/* IE 9 */
+    -webkit-transform: skew(30deg,20deg);	/* Safari and Chrome */
+    -o-transform: skew(30deg,20deg);	/* Opera */
+    -moz-transform: skew(30deg,20deg);	/* Firefox */
 
+    transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+    -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
+    -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
+    -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
+    -o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+    /*3D旋转*/
+
+}
+    .mac2{
+        transform: rotateX(120deg);
+        -webkit-transform: rotate3d(0.2,0.5,0.2,100deg);	/* Safari 和 Chrome */
+        -moz-transform: rotateY(130deg);	/* Firefox */
+    }
+
+
+.example {
+    width: 150px;
+    height: 80px;
+}
+.example1 {
+    background: -moz-linear-gradient( top,#ccc,#000);/*线性渐变*/
+    background:-webkit-linear-gradient(top,#ccc,#000);
+    background: -webkit-gradient(linear,center top,center bottom,from(#ccc), to(#000));
+    background:-o-linear-gradient(top,#ccc, #000);
 
 }
 </style>
@@ -64,6 +107,8 @@ div
 
 </div>
 <div class="mac1"></div>
+<div class="mac2 mac1"></div>
+<div class="example example1"></div>
 <h1>我了个去</h1>
 <!--<script>-->
     <!--foo = function(){-->

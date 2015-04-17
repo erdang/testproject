@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+div {padding: 40px 50px;}
+#div1 {background: red; position: absolute;}
+#div2 {background: green;}
+#div3 {background: blue;}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//each : 遍历结果
+	//参数:函数 循环过程中执行的
+	//这个函数接收两个参数:
+		//1.index : 表示当前循环的索引
+		//2.obj : 表示当前循环的对象(原生)
+	//这个函数里面的this指向的是obj
+	$('div').each(function(index, obj) {
+		//alert(1);
+		//alert('第' + index + '个,是' + obj.id);
+		alert('第' + index + '个,是' + this.id);
+	});
+	
+})
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    	<div id="div2">
+        	<div id="div3"></div>
+        </div>
+    </div>
+</body>
+</html>

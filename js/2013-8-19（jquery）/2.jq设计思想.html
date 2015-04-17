@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+/*
+window.onload = function() {}
+window.addEventListener('load', function() {});
+$(function() {
+	
+})
+*/
+/*alert(1);
+$(function() {
+	alert(2);
+})
+$(function() {
+	alert(3);
+})*/
+/*function $(fn) {
+	window.addEventListener('load', fn);
+}*/
+
+
+
+$(function() {
+	//选择器 - 选择页面元素的方法
+	//*
+	//$('*').css('background', 'red');
+	
+	//id
+	//$('#div1').css('background', 'red');
+	
+	//tagName
+	//$('li').css('background', 'red');
+	
+	//class
+	//$('.box').css('background', 'red');
+	
+	//层级
+	//$('div span').css('background', 'red');
+	
+	//筛选
+	//$('li.box').css('background', 'red');
+	
+	//在jq中99%的操作都是通过方法(函数)来实现的
+	//$('#div1').height('400px');
+	
+	//链式操作
+	//$('#div1').height('400px').css('background', 'red');
+	
+	//结果集 : 结果的集合 结果:选中的元素
+	//结果集操作,非结果集操
+	//$('ul').css('background', 'red').find('.box').css('background', 'green').end().css('font-size', '40px');
+	
+	//如果是设置,那么影响的是所有结果,如果是获取,则返回的是结果中的第0个
+	//$('li').height('40px');
+	//alert($('li').html());
+	
+	var oDiv = document.getElementById('div1');
+	oDiv.innerHTML = 'aaaaaaaaa';
+	
+	$('li').html('40px');
+	
+	//错的
+	//oDiv.html('40px');
+	//$('li').innerHTML = 'aaaaaaaaa';
+	
+})
+</script>
+</head>
+
+<body>
+	111111111111111
+    <div id="div1">div1<span>span</span></div>
+    <ul id="ul1">
+    	<li>1111111</li>
+        <li class="box">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+    <ul id="ul2">
+    	<li>1111111</li>
+        <li class="box">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+</body>
+</html>

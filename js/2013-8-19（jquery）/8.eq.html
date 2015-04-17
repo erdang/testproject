@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//eq : 选择结果集中的指定第几个元素,返回JQ对象
+	$('li').eq(1).css('background', 'red');
+	//get : 选择结果集中的指定第几个元素,返回原生对象
+	$('li').get(2).style.background = 'red';
+	
+})
+</script>
+</head>
+
+<body>
+    <div id="div1">div1<span>span</span></div>
+    <div id="div2" class="box">div2</div>
+    <ul id="ul1">
+    	<li>1111111</li>
+        <li class="box">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+    <ul id="ul2">
+    	<li>1111111</li>
+        <li class="box">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+</body>
+</html>

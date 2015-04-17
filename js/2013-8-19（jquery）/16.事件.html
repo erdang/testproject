@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	/*document.onclick = function(ev) {
+		alert(ev);
+	}*/
+	
+	//ev.cancelBubble = true;
+	$(document).on('click', function(ev) {
+		//alert(ev);
+		//alert(ev.clientX);
+		alert(2);
+		//alert(ev.cancelBubble);
+	});
+	
+	$(document).on('keydown', function(ev) {
+		
+		//alert(ev.keyCode);
+		alert(ev.which);	//兼容,推荐使用
+	});
+	
+	$('#btn1').on('click', function(ev) {
+		alert(1);
+		//ev.stopPropagation();	//阻止冒泡
+		return false;
+	});
+	
+	$(document).on('contextmenu', function(ev) {
+		
+		//ev.preventDefault();
+		return false;
+	});
+	
+	//stopPropagation : 阻止冒泡
+	//preventDefault : 阻止默认行为
+	//return flase; 阻止冒泡 + 阻止默认行为
+	
+})
+</script>
+</head>
+
+<body>
+	<input type="button" value="按钮" id="btn1" />
+</body>
+</html>

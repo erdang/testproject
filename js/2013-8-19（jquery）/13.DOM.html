@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//document.createElement(标签名);
+	//$('<p>');
+	
+	//appendChild
+	//append, appendTo
+	//$('#div1').append($('<p>').html('ppppppppppp'));
+	//$('<p>').html('ppppppppppp').appendTo($('#div1'));
+	
+	//before,insertBefore
+	//$('#div1').before($('<p>').html('ppppppppppp'));
+	//$('<p>').html('ppppppppppp').insertBefore($('#div1'));
+	
+	//after,insertAfter
+	//$('#div1').after($('<p>').html('ppppppppppp'));
+	//$('<p>').html('ppppppppppp').insertAfter($('#div1'));
+	
+	//prepend,prependTo
+	//$('#ul1').prepend($('<li>').html('00000000000'));
+	
+	//remove() 移除节点
+	$('#div1').remove();
+})
+</script>
+</head>
+
+<body>
+	<div id="div1" style="width:100px; height: 100px; border: 1px solid red; padding: 10px; margin: 10px;"></div>
+    <ul id="ul1">
+    	<li>11111111111111</li>
+        <li>222222222222</li>
+        <li>3333333333333333</li>
+        <li>444444444444</li>
+    </ul>
+</body>
+</html>

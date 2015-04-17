@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1 {background: red; position:absolute; width:100px; height: 100px; left:0px; top:0px; z-index:1}
+#div2 {background: black; position: absolute; width:100px; height: 30px;left:0px; top:0px; z-index:2}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	$('#div2').on('mousedown', function(ev) {
+		var disX = ev.clientX - $("#div1").get(0).offsetLeft
+		var disY = ev.clientY - $("#div1").get(0).offsetTop;
+		
+		$(document).on('mousemove', function(ev) {
+			
+			$('#div1').css({
+				left	:	ev.clientX - disX,
+				top		:	ev.clientY - disY
+			});
+			
+		});
+		
+		$(document).on('mouseup', function() {
+			
+			$(this).off('mousemove');
+			
+		});
+		
+		//ev.preventDefault();
+		return false;
+		
+	});
+	
+})
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    <div id="div2"></div>
+    </div>
+</body>
+</html>

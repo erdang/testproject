@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+p {display: none;}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+/*$(function() {
+	
+	//on(事件名称,事件处理函数) : addEventListener(事件名称,事件处理函数)
+	$('#div1 input').on('click', function() {
+		//this : 和原生一样
+		//alert(this);
+		//this.style.background = 'red';
+		//原生对象 -> jq对象  $(原生对象)
+		//$(this).css('background', 'red');
+		
+		$('#div1 input').css('background', '');
+		$('#div1 p').css('display', 'none');
+		
+		$(this).css('background', 'yellow');
+		$('#div1 p').eq($(this).index()).css('display', 'block');
+		
+	});
+	
+	
+})*/
+$(function(){
+
+	$('#div1 input').on('click',function(){
+	
+		$('#div1 input').css('background','');
+		$('#div1 p').css('display','none');
+		
+		$(this).css('background','yellow');
+		$('#div1 p').eq($(this).index()).css('display', 'block');
+	
+	
+	
+	});
+})
+
+</script>
+</head>
+
+<body>
+    <div id="div1">
+    	<input type="button" value="选项一" style="background:yellow" />
+        <input type="button" value="选项二" />
+        <input type="button" value="选项三" />
+        <p style="display: block">1111111111111</p>
+        <p>222222222222222</p>
+        <p>333333333333</p>
+    </div>
+</body>
+</html>

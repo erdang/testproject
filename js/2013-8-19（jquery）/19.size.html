@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+div {padding: 40px 50px;}
+#div1 {background: red; position: absolute;}
+#div2 {background: green;}
+#div3 {background: blue;}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//size 获取结果个数
+	alert($('div').size());
+	
+	alert($('div').length);
+	
+})
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    	<div id="div2">
+        	<div id="div3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//index : 获取当前结果的索引
+	//如果没有参数,则返回的是当前结果在他的兄弟节点中所在位置
+	alert($('#li5').index());
+	//如果有参数,参数接收jq选择器表达式,返回的是他在这个参数选择器中匹配元素中的位置
+	alert($('#li4').index('li.box'));
+	
+})
+</script>
+</head>
+
+<body>
+    <div id="div1">div1<span>span</span></div>
+    <div id="div2" class="box">div2</div>
+    <ul id="ul1">
+    	<li>1111111</li>
+        <li class="box" id="li1">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+    <ul id="ul2">
+    	<li id="li4">1111111</li>
+        <li class="box" id="li5">22222222222</li>
+        <li class="box">3333333333</li>
+        <li>4444444444</li>
+    </ul>
+</body>
+</html>

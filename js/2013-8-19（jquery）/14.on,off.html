@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//on 绑定事件
+	$(document).on('click', function() {
+		alert(1);
+		//off : 移除事件处理函数
+		$(document).off('click');
+	});
+	
+})
+</script>
+</head>
+
+<body>
+</body>
+</html>

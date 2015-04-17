@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	alert($('#div1').width());	//width
+	alert($('#div1').innerWidth());	//clientWidth
+	alert($('#div1').outerWidth());	//offsetWidth
+	
+})
+</script>
+</head>
+
+<body>
+	<div id="div1" style="width:100px; height: 100px; border: 1px solid red; padding: 10px; margin: 10px;"></div>
+</body>
+</html>

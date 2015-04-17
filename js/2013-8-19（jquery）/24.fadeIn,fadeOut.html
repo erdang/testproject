@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1 {background: red; width:100px; height: 100px; display: none;}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//fadeIn:淡入
+	//fadeOut:淡出
+		//第一个参数，是运动时间
+		//第二个参数，是运动完成后的回调函数
+	$('input').hover(function() {
+		$('#div1').fadeIn(2000, function() {
+			$('#div1').css('background', 'green');
+		});
+	}, function() {
+		//$('#div1').fadeOut();
+			//1.运动时间
+			//2.运动到的目标透明度 0-1
+		$('#div1').fadeTo(2000, 0.3);
+	});
+	
+	
+})
+</script>
+</head>
+
+<body>
+	<input type="button" value="按钮" />
+	<div id="div1"></div>
+</body>
+</html>

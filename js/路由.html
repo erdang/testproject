@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+</head>
+
+<body>
+
+    <a href="#!/a">aaaaaa</a>
+    <a href="#!/b">bbbbbb</a>
+    <a href="#!/c">cccccc</a>
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="router.js"></script>
+<script>
+    $(function(){
+
+//        (function(exports){
+//            var Router=exports.router;
+//            Router();
+//        })(window)
+        //Router();
+       // router(routers);
+        var routers={
+            '/a':function(){
+
+                alert(1);
+            },
+            '/b':function(){
+
+                alert(2);
+            },
+            '/c':function(){
+
+                alert(3);
+            },
+            'init':function(){
+
+                alert(4);
+            },
+            'index':function(){
+
+                alert(5);
+            }
+        };
+        router(routers);
+    })
+
+
+</script>
+</body>
+</html>

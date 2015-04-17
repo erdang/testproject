@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+div {padding: 40px 50px;}
+#div1 {background: red; position: absolute;}
+#div2 {background: green;}
+#div3 {background: blue;}
+</style>
+<script src="jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+	
+	//offset(); 获取一个对象到页面的绝对距离,返回一个json{left,top}
+	//alert($('#div3').offset().left);
+	//alert($('#div3').offset().top);
+	
+	//position -> offsetLeft/offsetTop
+	//alert($('#div3').position().left);
+	
+	//parentNode
+	alert($('#div3').parent().attr('id'));
+	//offsetParent
+	alert($('#div3').offsetParent().attr('id'));
+	
+})
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    	<div id="div2">
+        	<div id="div3"></div>
+        </div>
+    </div>
+</body>
+</html>
